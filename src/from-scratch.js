@@ -13,15 +13,7 @@ class Quadrilateral {
 class Rectangle extends Quadrilateral {
   constructor(sideL, sideW) {
     super(sideL, sideW, sideL, sideW)
-    this.side1 = sideL;
-    this.side2 = sideW;
-    this.side3 = sideL;
-    this.side4 = sideW;
   };
-  // getPerimeter() {
-  //   // super.getPerimeter()
-  //   return this.side1* 2 + this.side2 * 2 
-  // };
   getArea() {
     return this.side1 * this.side2;
   };
@@ -30,17 +22,7 @@ class Rectangle extends Quadrilateral {
 class Square extends Rectangle {
   constructor(side) {
     super(side, side)
-    this.side1 = side;
-    this.side2 = side;
-    this.side3 = side;
-    this.side4 = side;
   };
-  // getPerimeter() {
-  //   return this.side1 * 4;
-  // };
-  // getArea() {
-  //   return this.side1 * this.side1;
-  // };
   getDiagonal() {
     return (Math.sqrt(2)) * this.side1;
     //Math.sqrt((this.side1 * this.side1)*2)

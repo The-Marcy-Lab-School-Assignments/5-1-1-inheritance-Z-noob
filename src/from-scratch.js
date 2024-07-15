@@ -31,7 +31,28 @@ class Square extends Rectangle {
 
 /* Be creative with this one! */
 class Person {
-
+  #private = [];
+  constructor(data1, data2, data3) {
+    this.data1 = data1;
+    this.data2 = data2;
+    this.data3 = data3;
+    this.#private.push(this);
+  };
+  starterConvo() {
+    return `Hello! One of the dream is ${this.data1}`;
+  };
+  todos() {
+    return this.data2.gorEach((todo) => {return console.log(`Todo ${todo}`)});
+  };
+  age(presentYear) {
+    return presentYear - this.data3;
+  };
+  list() {
+    return [...this.#private];
+  };
+  find(birth) {
+    return this.#private.find(obj => obj.data3 === birth)
+  };
 }
 
 module.exports = {

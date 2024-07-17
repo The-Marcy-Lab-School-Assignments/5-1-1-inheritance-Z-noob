@@ -1,3 +1,4 @@
+/** FEEDBACK: Great job!!!! */
 class Quadrilateral {
   constructor(side1, side2, side3, side4) {
     this.side1 = side1;
@@ -23,6 +24,7 @@ class Square extends Rectangle {
   constructor(side) {
     super(side, side)
   };
+  /** FEEDBACK: This could go in the rectangle class since we can get the diagonal of a rectangle! */
   getDiagonal() {
     return (Math.sqrt(2)) * this.side1;
     //Math.sqrt((this.side1 * this.side1)*2)
